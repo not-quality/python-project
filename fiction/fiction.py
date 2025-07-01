@@ -9,7 +9,7 @@ et = html.etree
 
 """
 笔趣阁小说爬取
-以《凡人修仙传》为例。
+以《凡人修仙传》为例
 """
 
 # 主页地址
@@ -33,7 +33,7 @@ count = 0
 # while True:
 
 # 部分下载
-for _ in range(10):
+for _ in range(1):
 
     # 计数器
     count += 1
@@ -49,6 +49,8 @@ for _ in range(10):
 
     # xpath筛选网页数据
     e = et.HTML(res.text)
+
+
     title = e.xpath('//div/div/h1/text()')[0]
     content = e.xpath('//div[@id="chaptercontent"]/text()')
     url_next = e.xpath('//*[@id="pb_next"]/@href')[0]
