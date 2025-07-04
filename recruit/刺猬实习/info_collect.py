@@ -18,7 +18,7 @@ size = []
 address = []
 trade = []
 
-n = 10
+n = 50
 count = 0
 for i in range(n):
     count += 1
@@ -38,7 +38,7 @@ for i in range(n):
     href1.extend(data["jobid"])                                     #岗位详情网址ID
     href2.extend(data["company_id"])                                #公司详情网址ID
 
-    # 数据保存
+    # # 数据保存
     # data_dic_1 = {
     #     '岗位名称': job,
     #     '薪资待遇': salary,
@@ -46,10 +46,9 @@ for i in range(n):
     #     '岗位详情网址ID': href1,
     #     '公司详情网址ID': href2
     # }
-    # 循环采集时不可用的
+    # # 循环采集时不可用的
     # job_1 = pd.DataFrame(data_dic_1)
     # print(job_1)
-
 
 
     """二级数据采集"""
@@ -91,7 +90,7 @@ for i in range(n):
     #     '工作地点': address,
     #     '企业领域': trade
     # }
-    # 循环采集时不可用的
+    # # 循环采集时不可用的
     # job_2 = pd.DataFrame(data_dic_2)
     # print(job_2)
 
