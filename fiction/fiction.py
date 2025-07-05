@@ -1,10 +1,12 @@
 import requests
-from lxml import html
+from lxml import etree
 from pathlib import Path
 import re
 import time
 import random
-et = html.etree
+# etree方法加载不到时尝试
+# from lxml import html
+# et = html.etree
 
 
 """
@@ -46,10 +48,8 @@ for _ in range(1):
     res = requests.get(url, headers=headers)
     res.encoding = 'utf-8'
 
-
     # xpath筛选网页数据
-    e = et.HTML(res.text)
-
+    e = etree.HTML(res.text)
 
     title = e.xpath('//div/div/h1/text()')[0]
     content = e.xpath('//div[@id="chaptercontent"]/text()')
